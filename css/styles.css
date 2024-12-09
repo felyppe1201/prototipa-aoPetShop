@@ -1,0 +1,190 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Faz o body ocupar toda a altura da tela */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFA500;
+  color: white;
+  padding: 10px 5%;
+}
+
+header .logo img {
+  width: 100px; /* Ajusta o tamanho do logo */
+  height: auto;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 5%;
+  background: #333;
+  color: white;
+  margin-top: auto;
+}
+
+/* Banner Section com a Imagem */
+.banner {
+  width: 100%; /* Garante que o banner ocupe a largura total da tela */
+  height: 50%; /* Altura do banner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  width: 100%; /* A imagem ocupa toda a largura disponível */
+  height: 100%; /* A altura é ajustada automaticamente */
+  object-fit: cover; /* A imagem vai cobrir a área sem distorcer, mas pode cortar um pouco as bordas */
+  object-position: center; /* Centraliza a imagem, garantindo que o centro seja o foco */
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  padding: 20px 5%;
+}
+
+.products {
+  padding: 30px 0;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  width: 30%; /* Ajustado para 3 itens por fileira */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Botões */
+.btn {
+  background-color: #e57373; /* Cor vermelha suave */
+  color: white;
+  padding: 6px 12px; /* Botões menores */
+  border: none;
+  cursor: pointer;
+  border-radius: 25px; /* Bordas arredondadas */
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+/* Evitando alteração no hover */
+.btn:hover {
+  background-color: #e57373; /* Mantendo a mesma cor no hover */
+}
+
+/* Novas regras para a página de Login/Cadastro */
+.login-register {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+.form-container {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  height: auto;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 8px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button.btn {
+  background-color: #FFA500;
+  color: white;
+  margin-left: 80%;
+  padding: 10px;
+  width: 20%;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #e69500;
+}
+
+p {
+  margin-top: 10px;
+}
+
+p a {
+  color: #FFA500;
+  text-decoration: none;
+}

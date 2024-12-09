@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop - Funcionários</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/logo.png" alt="Logo Pet Shop">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="funcionarios.html">Funcionários</a></li>
+                <li><a href="admin.html">Administração</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Gerenciamento de Visitas -->
+        <section id="gerenciar-visitas">
+            <h2>Gerenciar Visitas</h2>
+            <form action="/gerenciar-visitas" method="POST">
+                <label for="animal">Animal:</label>
+                <input type="text" id="animal" name="animal" placeholder="Nome do animal" required><br><br>
+
+                <label for="tipo-servico">Tipo de Serviço:</label>
+                <select id="tipo-servico" name="tipo-servico" required>
+                    <option value="banho">Banho</option>
+                    <option value="tosa">Tosa</option>
+                    <option value="vacina">Vacina</option>
+                    <option value="consulta">Consulta</option>
+                </select><br><br>
+
+                <label for="data-visita">Data da Visita:</label>
+                <input type="date" id="data-visita" name="data-visita" required><br><br>
+
+                <label for="observacao">Observação:</label>
+                <textarea id="observacao" name="observacao" rows="4" placeholder="Observações sobre a visita"></textarea><br><br>
+
+                <button class="btn" type="submit">Registrar Visita</button>
+            </form>
+        </section>
+
+        <!-- Cadastro de Animais -->
+        <section id="cadastrar-animais">
+            <h2>Cadastrar Novo Animal</h2>
+            <form action="/cadastrar-animal" method="POST">
+                <label for="nome-animal">Nome do Animal:</label>
+                <input type="text" id="nome-animal" name="nome-animal" placeholder="Nome do animal" required><br><br>
+
+                <label for="tipo-animal">Tipo:</label>
+                <select id="tipo-animal" name="tipo-animal" required>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="passaro">Pássaro</option>
+                    <option value="outro">Outro</option>
+                </select><br><br>
+
+                <label for="raca">Raça:</label>
+                <input type="text" id="raca" name="raca" placeholder="Raça do animal" required><br><br>
+
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required><br><br>
+
+                <button class="btn" type="submit">Cadastrar Animal</button>
+            </form>
+        </section>
+
+        <!-- Atendimento ao Cliente -->
+        <section id="atendimento-cliente">
+            <h2>Atendimento ao Cliente</h2>
+            <form action="/atendimento-cliente" method="POST">
+                <label for="nome-cliente">Nome do Cliente:</label>
+                <input type="text" id="nome-cliente" name="nome-cliente" placeholder="Nome do cliente" required><br><br>
+
+                <label for="email-cliente">E-mail:</label>
+                <input type="email" id="email-cliente" name="email-cliente" placeholder="E-mail do cliente" required><br><br>
+
+                <label for="telefone-cliente">Telefone:</label>
+                <input type="text" id="telefone-cliente" name="telefone-cliente" placeholder="Telefone do cliente" required><br><br>
+
+                <button class="btn" type="submit">Atender Cliente</button>
+            </form>
+        </section>
+
+        <!-- Gerenciamento de Serviços -->
+        <section id="gerenciar-servicos">
+            <h2>Gerenciar Serviços</h2>
+            <form action="/gerenciar-servicos" method="POST">
+                <label for="novo-servico">Adicionar Novo Serviço:</label>
+                <input type="text" id="novo-servico" name="novo-servico" placeholder="Novo serviço a ser adicionado" required><br><br>
+
+                <button class="btn" type="submit">Adicionar Serviço</button>
+            </form>
+        </section>
+
+        <!-- Agendamento de Serviços -->
+        <section id="agendamento-servicos">
+            <h2>Agendar Serviço</h2>
+            <form action="/agendar-servico" method="POST">
+                <label for="animal-servico">Animal:</label>
+                <input type="text" id="animal-servico" name="animal-servico" placeholder="Nome do animal" required><br><br>
+
+                <label for="servico-agenda">Serviço:</label>
+                <select id="servico-agenda" name="servico-agenda" required>
+                    <option value="banho">Banho</option>
+                    <option value="tosa">Tosa</option>
+                    <option value="vacina">Vacina</option>
+                    <option value="consulta">Consulta</option>
+                </select><br><br>
+
+                <label for="data-servico">Data do Serviço:</label>
+                <input type="date" id="data-servico" name="data-servico" required><br><br>
+
+                <button class="btn" type="submit">Agendar Serviço</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pet Shop. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

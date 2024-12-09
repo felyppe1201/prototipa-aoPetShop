@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop - Administração</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/logo.png" alt="Logo Pet Shop">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="funcionarios.html">Funcionários</a></li>
+                <li><a href="admin.html">Administração</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Gerenciamento de Funcionários -->
+        <section id="gerenciar-funcionarios">
+            <h2>Gerenciar Funcionários</h2>
+            <form action="/gerenciar-funcionarios" method="POST">
+                <label for="nome-funcionario">Nome do Funcionário:</label>
+                <input type="text" id="nome-funcionario" name="nome-funcionario" placeholder="Nome do funcionário" required><br><br>
+
+                <label for="cargo-funcionario">Cargo:</label>
+                <input type="text" id="cargo-funcionario" name="cargo-funcionario" placeholder="Cargo do funcionário" required><br><br>
+
+                <label for="horario-trabalho">Horário de Trabalho:</label>
+                <input type="time" id="horario-trabalho" name="horario-trabalho" required><br><br>
+
+                <button class="btn" type="submit">Adicionar Funcionário</button>
+            </form>
+        </section>
+
+        <!-- Gerenciamento de Estoque -->
+        <section id="gerenciar-estoque">
+            <h2>Gerenciar Estoque</h2>
+            <form action="/gerenciar-estoque" method="POST">
+                <label for="produto">Produto:</label>
+                <input type="text" id="produto" name="produto" placeholder="Nome do produto" required><br><br>
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" placeholder="Quantidade do produto" required><br><br>
+
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" name="preco" placeholder="Preço do produto" required><br><br>
+
+                <button class="btn" type="submit">Adicionar Produto ao Estoque</button>
+            </form>
+        </section>
+
+        <!-- Relatórios Gerenciais -->
+        <section id="relatorios">
+            <h2>Relatórios Gerenciais</h2>
+            <form action="/gerar-relatorio" method="POST">
+                <label for="tipo-relatorio">Tipo de Relatório:</label>
+                <select id="tipo-relatorio" name="tipo-relatorio" required>
+                    <option value="vendas">Relatório de Vendas</option>
+                    <option value="funcionarios">Relatório de Funcionários</option>
+                    <option value="clientes">Relatório de Clientes</option>
+                </select><br><br>
+
+                <label for="data-inicial">Data Inicial:</label>
+                <input type="date" id="data-inicial" name="data-inicial" required><br><br>
+
+                <label for="data-final">Data Final:</label>
+                <input type="date" id="data-final" name="data-final" required><br><br>
+
+                <button class="btn" type="submit">Gerar Relatório</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pet Shop. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
